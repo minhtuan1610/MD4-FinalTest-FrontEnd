@@ -14,35 +14,55 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Thêm thành phố</h5>
                 <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
             </div>
             <div class="modal-body">
                 <form>
                     <div class="mb-3">
-                        <label class="col-form-label" for="recipient-name">Recipient:</label>
-                        <input class="form-control" id="recipient-name" type="text">
+                        <label class="col-form-label" for="city-name">Tên thành phố:</label>
+                        <input class="form-control" id="city-name" type="text">
                     </div>
                     <div class="mb-3">
-                        <label class="col-form-label" for="message-text">Message:</label>
-                        <textarea class="form-control" id="message-text"></textarea>
+                        <label class="col-form-label" for="nation-name">Quốc gia:</label>
+                        <!--                        <input class="form-control" id="nation-name" type="text">-->
+                        <select aria-label="Default select example" class="form-select" id="nation-name"></select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="col-form-label" for="area-name">Diện tích:</label>
+                        <input class="form-control" id="area-name" type="number">
+                    </div>
+                    <div class="mb-3">
+                        <label class="col-form-label" for="population-name">Dân số:</label>
+                        <input class="form-control" id="population-name" type="number">
+                    </div>
+                    <div class="mb-3">
+                        <label class="col-form-label" for="gdp-name">GDP:</label>
+                        <input class="form-control" id="gdp-name" type="number">
+                    </div>
+                    <div class="mb-3">
+                        <label class="col-form-label" for="description-text">Giới thiệu:</label>
+                        <textarea class="form-control" id="description-text"></textarea>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
-                <button class="btn btn-primary" type="button">Send message</button>
+                <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Thoát</button>
+                <button class="btn btn-primary" onclick="addCity()" type="submit">Thêm thành phố</button>
             </div>
         </div>
     </div>
 </div>
+
+<!--Sửa thành phố-->
+<div id="edit-city"></div>
+
 <!--Danh sách thành phố-->
 <h2><b>Danh sách thành phố</b></h2>
 <div>
-    <table class="table" id="city-table">
-
-    </table>
+    <table class="table" id="city-table"></table>
 </div>
+
 <script src="jquery-3.6.0.js"></script>
 <script src="city.js"></script>
 <script src="operation.js"></script>

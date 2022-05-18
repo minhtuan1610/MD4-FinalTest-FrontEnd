@@ -32,3 +32,5 @@ function getCity(data) {
         </tr>`;
     return cityChoosen;
 }
+
+// Add City

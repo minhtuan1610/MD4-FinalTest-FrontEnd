@@ -54,6 +54,47 @@ function displayNation() {
 }
 
 // Add City
+function showCreateForm() {
+    displayNation();
+    let content = `<div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Thêm thành phố</h5>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="col-form-label" for="city-name">Tên thành phố:</label>
+                        <input class="form-control" id="city-name" type="text">
+                    </div>
+                    <div class="mb-3">
+                        <label class="col-form-label" for="nation-name">Quốc gia:</label>
+                        <select aria-label="Default select example" class="form-select" id="nation-name"></select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="col-form-label" for="area-name">Diện tích:</label>
+                        <input class="form-control" id="area-name" type="number">
+                    </div>
+                    <div class="mb-3">
+                        <label class="col-form-label" for="population-name">Dân số:</label>
+                        <input class="form-control" id="population-name" type="number">
+                    </div>
+                    <div class="mb-3">
+                        <label class="col-form-label" for="gdp-name">GDP:</label>
+                        <input class="form-control" id="gdp-name" type="number">
+                    </div>
+                    <div class="mb-3">
+                        <label class="col-form-label" for="description-text">Giới thiệu:</label>
+                        <textarea class="form-control" id="description-text"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Thoát</button>
+                <button class="btn btn-primary" onclick="addCity()" type="button" data-bs-dismiss="modal">Thêm thành phố</button>
+            </div>`;
+    $('#show-modal').html(content);
+}
+
 function addCity() {
     let cityName = $(`#city-name`).val();
     let nationName = $(`#nation-name`).val();
